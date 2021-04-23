@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="/assets/css/lightgallery.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="navbar is-fixed-top is-warning">
+      <div class="container">
+        <!-- Navbar Section -->
+        <nav
+          class="navbar is-warning"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img
+                src="https://bulma.io/images/bulma-logo.png"
+                width="112"
+                height="28"
+              />
+            </a>
+            <a
+              role="button"
+              class="navbar-burger"
+              data-target="navMenu"
+              aria-label="menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="/">Home</a>
+              <a class="navbar-item" href="/gallery.html">Gallery</a>
+              <a class="navbar-item" href="/videos.html">Videos</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="section">
+      <div class="hero-body has-text-centered">
+        <p class="title">Gallery</p>
+        <p class="subtitle">More image if you want.</p>
+      </div>
+    </section>
+    <section class="">
+      <div class="container">
+        <div class="columns is-multiline" id="lightgallery">
+          <a class="column is-3" data-src="assets/images/gallery/01.jpg">
+            <img class="gallery" src="assets/images/gallery/01.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/02.jpg">
+            <img class="gallery" src="assets/images/gallery/02.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/03.jpg">
+            <img class="gallery" src="assets/images/gallery/03.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/04.jpg">
+            <img class="gallery" src="assets/images/gallery/04.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/05.jpg">
+            <img class="gallery" src="assets/images/gallery/05.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/06.jpg">
+            <img class="gallery" src="assets/images/gallery/06.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/07.jpg">
+            <img class="gallery" src="assets/images/gallery/07.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/08.jpg">
+            <img class="gallery" src="assets/images/gallery/08.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/09.jpg">
+            <img class="gallery" src="assets/images/gallery/09.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/10.jpg">
+            <img class="gallery" src="assets/images/gallery/10.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/11.jpg">
+            <img class="gallery" src="assets/images/gallery/11.jpg" />
+          </a>
+          <a class="column is-3" data-src="assets/images/gallery/12.jpg">
+            <img class="gallery" src="assets/images/gallery/12.jpg" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- LightGallery -->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/picturefill.min.js"></script>
+    <script src="script/jquery.mousewheel.min.js"></script>
+    <script src="script/lightgallery-all.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#lightgallery").lightGallery({
+          pager: true,
+        });
+      });
+    </script>
+    <!-- Navbar Toggle  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function ($el) {
+            $el.addEventListener("click", function () {
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target;
+              var $target = document.getElementById(target);
+
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

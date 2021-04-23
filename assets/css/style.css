@@ -1,0 +1,27 @@
+/* Global */
+img {
+  object-fit: cover;
+}
+
+.evolution {
+  justify-content: center !important;
+  display: flex !important;
+}
+
+/* Gallery */
+.gallery {
+  width: 350px;
+  height: 220px;
+  transition: all 0.2s ease;
+}
+.gallery:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* Slider */
+.slider {
+  overflow: hidden;
+  height: 500px;
+}

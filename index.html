@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="assets/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Index</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div class="navbar is-fixed-top is-warning">
+      <div class="container">
+        <nav
+          class="navbar is-warning"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img
+                src="https://bulma.io/images/bulma-logo.png"
+                width="112"
+                height="28"
+              />
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger"
+              data-target="navMenu"
+              aria-label="menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="/">Home</a>
+              <a class="navbar-item" href="/gallery.html">Gallery</a>
+              <a class="navbar-item" href="/videos.html">Videos</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Hero section -->
+    <section class="section is-medium">
+      <div class="container">
+        <div class="columns is-align-items-center my-5">
+          <div class="column">
+            <div class="title is-1 has-text-centered">
+              "Black Leg", Vinsmoke Sanji
+            </div>
+            <div class="is-5 has-text-centered">
+              born as Vinsmoke Sanji, is the cook of the Straw Hat Pirates. He
+              is the fifth member of the crew and the fourth to join, doing so
+              at the end of the Baratie Arc.
+            </div>
+          </div>
+          <div class="column">
+            <div class="image is-4by3">
+              <img class="" src="/assets/images/sanji.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Slider -->
+    <div class="slider">
+      <!-- Start Carousel -->
+      <div id="carousel" class="carousel">
+        <div class="item-1">
+          <img src="assets/images/gallery/01.jpg" />
+        </div>
+        <div class="item-2">
+          <img src="assets/images/gallery/02.jpg" />
+        </div>
+        <div class="item-3">
+          <img src="assets/images/gallery/03.jpg" />
+        </div>
+        <div class="item-3">
+          <img src="assets/images/gallery/04.jpg" />
+        </div>
+        <div class="item-3">
+          <img src="assets/images/gallery/05.jpg" />
+        </div>
+        <div class="item-3">
+          <img src="assets/images/gallery/06.jpg" />
+        </div>
+      </div>
+      <!-- End Carousel -->
+    </div>
+    <!-- Evolution -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="title is-size-2 has-text-centered">Evolution</div>
+        <div class="columns evo">
+          <div class="column evolution">
+            <div class="image is-128x128">
+              <img class="is-rounded" src="/assets/images/evo/01-kid.jpg" />
+              <div class="mt-2 is-size-6 has-text-centered">Kid</div>
+            </div>
+          </div>
+          <div class="column evolution">
+            <div class="image is-128x128">
+              <img
+                class="is-rounded image is-128x128"
+                src="/assets/images/evo/02-young.jpg"
+              />
+              <div class="mt-2 is-size-6 has-text-centered">Young</div>
+            </div>
+          </div>
+          <div class="column evolution">
+            <div class="image is-128x128">
+              <img
+                class="is-rounded image is-128x128"
+                src="/assets/images/evo/03.jpg"
+              />
+              <div class="mt-2 is-size-6 has-text-centered">Luffu Crew</div>
+            </div>
+          </div>
+          <div class="column evolution">
+            <div class="image is-128x128">
+              <img
+                class="is-rounded image is-128x128"
+                src="/assets/images/evo/04.jpg"
+              />
+              <div class="mt-2 is-size-6 has-text-centered">Real Man</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section is-medium has-text-centered">
+      <h3 class="title is-2">Pudding</h3>
+      <video class="" src="assets/videos/kiss.mp4" width="620" controls></video>
+    </section>
+    <!-- Slider: Bulma-carousel -->
+    <script src="script/bulma-carousel.min.js"></script>
+    <script>
+      bulmaCarousel.attach("#carousel", {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        autoplay: true,
+        loop: true,
+        autoplaySpeed: 3000,
+      });
+    </script>
+    <!-- Navbar Toggle  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function ($el) {
+            $el.addEventListener("click", function () {
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target;
+              var $target = document.getElementById(target);
+
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

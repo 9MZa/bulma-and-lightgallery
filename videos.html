@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Index</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div class="navbar is-fixed-top is-warning">
+      <div class="container">
+        <nav
+          class="navbar is-warning"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img
+                src="https://bulma.io/images/bulma-logo.png"
+                width="112"
+                height="28"
+              />
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger"
+              data-target="navMenu"
+              aria-label="menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="/">Home</a>
+              <a class="navbar-item" href="/gallery.html">Gallery</a>
+              <a class="navbar-item" href="/videos.html">Videos</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="section">
+      <div class="hero-body has-text-centered">
+        <p class="title">Best shot.</p>
+        <p class="subtitle">Find videos you love.</p>
+      </div>
+    </section>
+    <section class="">
+      <div class="columns is-align-items-center is-justify-content-center">
+        <div class="column column is-4">
+          <video
+            class=""
+            src="/assets/videos/sanji-momo.mp4 "
+            width="600"
+            controls
+          />
+        </div>
+        <div class="column is-5">
+          <h3 class="title is-2">Funny scene</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            doloribus dicta laboriosam omnis ipsam voluptatibus libero voluptate
+            magnam qui amet deserunt optio, vero animi corrupti obcaecati
+            consequatur praesentium, modi excepturi.
+          </p>
+        </div>
+      </div>
+      <div class="columns is-align-items-center is-justify-content-center">
+        <div class="column is-5 has-text-right">
+          <h3 class="title is-2">Funny scene</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            doloribus dicta laboriosam omnis ipsam voluptatibus libero voluptate
+            magnam qui amet deserunt optio, vero animi corrupti obcaecati
+            consequatur praesentium, modi excepturi.
+          </p>
+        </div>
+        <div class="column column is-4">
+          <video src="/assets/videos/sanji-nami.mp4" width="600" controls />
+        </div>
+      </div>
+      <div class="columns is-align-items-center is-justify-content-center">
+        <div class="column column is-4">
+          <video
+            class=""
+            src="/assets/videos/sanji-save-66.mp4 "
+            width="600"
+            controls
+          />
+        </div>
+        <div class="column is-5">
+          <h3 class="title is-2">Save 66</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            doloribus dicta laboriosam omnis ipsam voluptatibus libero voluptate
+            magnam qui amet deserunt optio, vero animi corrupti obcaecati
+            consequatur praesentium, modi excepturi.
+          </p>
+        </div>
+      </div>
+      <div class="columns is-align-items-center is-justify-content-center">
+        <div class="column is-5 has-text-right">
+          <h3 class="title is-2">Soba Mask</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            doloribus dicta laboriosam omnis ipsam voluptatibus libero voluptate
+            magnam qui amet deserunt optio, vero animi corrupti obcaecati
+            consequatur praesentium, modi excepturi.
+          </p>
+        </div>
+        <div class="column column is-4">
+          <video
+            src="/assets/videos/sanji-to-blackleg.mp4"
+            width="600"
+            controls
+          />
+        </div>
+      </div>
+      <div class="columns is-align-items-center is-justify-content-center">
+        <div class="column column is-4">
+          <video src="/assets/videos/kiss.mp4" width="600" controls />
+        </div>
+        <div class="column is-5">
+          <h3 class="title is-2">Kiss</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            doloribus dicta laboriosam omnis ipsam voluptatibus libero voluptate
+            magnam qui amet deserunt optio, vero animi corrupti obcaecati
+            consequatur praesentium, modi excepturi.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar Toggle  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function ($el) {
+            $el.addEventListener("click", function () {
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target;
+              var $target = document.getElementById(target);
+
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
